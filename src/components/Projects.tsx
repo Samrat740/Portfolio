@@ -7,21 +7,24 @@ const projects = [
     title: "AI Travel Planner",
     description: "An intelligent travel planning application that uses AI to create personalized itineraries based on user preferences and constraints.",
     image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=500",
-    github: "https://github.com/Samrat740/ai-travel-planner",
+    github: "https://github.com/Samrat740/AI-Powered-Travel-Planner",
+    demo: "https://ai-powered-travel-planner-kquowvjmt8wcnftrebcpet.streamlit.app/",
     tech: ["Python", "TensorFlow", "Flask", "React"]
   },
   {
     title: "Seed AI App",
     description: "Machine learning application for identifying plant diseases and providing treatment recommendations using computer vision.",
     image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&q=80&w=500",
-    github: "https://github.com/Samrat740/seed-ai-app",
-    tech: ["Python", "PyTorch", "OpenCV", "Flutter"]
+    github: "https://github.com/Samrat740/Seed-quality-analyzer",
+    demo: "https://seed-quality-analyzer-zyhrrvlethrwmfgfmev3fj.streamlit.app/",
+    tech: ["Python", "OpenCV","HSV", "Laplachian", "Feature Extraction"]
   },
   {
     title: "Movie Recommender",
     description: "Content-based movie recommendation system using natural language processing and collaborative filtering.",
     image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=500",
     github: "https://github.com/Samrat740/movie-recommender",
+    demo: "/a.html",
     tech: ["Python", "Scikit-learn", "NLTK", "Streamlit"]
   },
   {
@@ -29,6 +32,7 @@ const projects = [
     description: "AI-powered email classification system that automatically categorizes emails based on content and priority.",
     image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?auto=format&fit=crop&q=80&w=500",
     github: "https://github.com/Samrat740/email-classifier",
+    demo: "/a.html",
     tech: ["Python", "SpaCy", "TensorFlow", "Flask"]
   },
   {
@@ -36,6 +40,7 @@ const projects = [
     description: "RPA bot for automated flight booking and price tracking using Blue Prism.",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=500",
     github: "https://github.com/Samrat740/flight-bot",
+    demo: "/a.html",
     tech: ["Blue Prism", "Python", "Selenium"]
   },
   {
@@ -43,6 +48,7 @@ const projects = [
     description: "Interactive quiz application with real-time scoring and leaderboard functionality.",
     image: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&q=80&w=500",
     github: "https://github.com/Samrat740/quiz-app",
+    demo: "/a.html",
     tech: ["React", "Node.js", "MongoDB", "Socket.io"]
   }
 ];
@@ -111,12 +117,15 @@ export default function Projects() {
                   </motion.a>
                   <motion.a
                     whileHover={{ scale: 1.1 }}
-                    href="#"
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <ExternalLink className="w-5 h-5" />
                     <span className="text-sm">Live Demo</span>
                   </motion.a>
+
                 </div>
               </div>
             </motion.div>
