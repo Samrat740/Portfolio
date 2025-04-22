@@ -10,7 +10,7 @@ const certifications = [
     date: "2025",
     description: "Robotic Process Automation concepts, UI automation, Data manipulation, Selectors, Control flow, and REFramework.",
     image: "UI.jpg",
-    url: "https://www.uipath.com/learning/automation-developer-associate-training"
+    url: "UI.jpg"
   },
   {
     title: "Master Course in Artificial Intelligence",
@@ -18,7 +18,7 @@ const certifications = [
     date: "2025",
     description: "Comprehensive program covering Machine learning algorithms, Natural Language Processing, Computer Vision, Deep learning, and practical AI applications.",
     image: "AI.jpg",
-    url: "https://www.greatlearning.in/pg-programs/artificial-intelligence"
+    url: "https://www.mygreatlearning.com/certificate/DPHWZKLO"
   },
   {
     title: "Cloud Computing",
@@ -26,7 +26,7 @@ const certifications = [
     date: "2024",
     description: "Fundamentals of cloud computing, virtualization, and cloud service models.",
     image: "Nptel.jpg",
-    url: "https://onlinecourses.nptel.ac.in/noc22_cs22/preview"
+    url: "https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs118/Course/NPTEL24CS118S167020233504432336.pdf"
   },
   {
     title: "Application Development in Java",
@@ -34,7 +34,7 @@ const certifications = [
     date: "2024",
     description: "In-depth study of Java programming concepts, design patterns, and enterprise applications.",
     image: "Java.jpg",
-    url: "https://www.lpu.in"
+    url: "Java.jpg"
   },
   {
     title: "Mastering Data Structures and Algorithms using C and C++",
@@ -42,7 +42,7 @@ const certifications = [
     date: "2024",
     description: "Focusing on algorithmic problem-solving, time-space complexity, and in-depth implementation of data structures like arrays, linked lists, stacks, queues, trees, graphs, and hashing.",
     image: "DSA.jpg",
-    url: "https://www.udemy.com/course/mastering-data-structures-and-algorithms-using-c-and-c/"
+    url: "https://www.udemy.com/certificate/UC-6efd7058-9307-4a6e-9aba-f181e3527fb3/"
   },
   {
     title: "SQL for Data Science",
@@ -50,7 +50,7 @@ const certifications = [
     date: "2023",
     description: "Advanced database concepts, SQL optimization, and database design principles.",
     image: "SQL.jpg",
-    url: "https://www.greatlearning.in/academy/learn-for-free/courses/sql-for-data-science"
+    url: "SQL.jpg"
   }
 ];
 
