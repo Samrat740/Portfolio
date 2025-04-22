@@ -23,14 +23,11 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      width: 90%;
       max-width: 600px;
       padding: 20px;
       border-radius: 20px;
@@ -38,6 +35,10 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       animation: fadeIn 1.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     h1 {
@@ -46,11 +47,9 @@
     }
 
     p {
-      font-size: 0.9rem; /* Reduced font size */
+      font-size: 0.95rem;
       margin-bottom: 1.5rem;
-      white-space: nowrap; /* Ensures text stays in one line */
-      overflow: hidden; /* Prevents overflow */
-      text-overflow: ellipsis; /* Adds ellipsis if text is too long */
+      line-height: 1.4;
     }
 
     .btn {
@@ -78,6 +77,27 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive adjustments for mobile */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      lottie-player {
+        width: 180px;
+        height: 180px;
+      }
     }
   </style>
 </head>
