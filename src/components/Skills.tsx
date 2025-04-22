@@ -46,7 +46,7 @@ const skills = [
     color: "text-red-400",
     bgColor: "bg-gray-900",
     borderColor: "border-red-800",
-    items: ["Java", "Kotlin", "Dart"]
+    items: ["Java", "Flutter"]
   },
   {
     category: "Data Science",
@@ -70,7 +70,7 @@ const skills = [
     color: "text-orange-400",
     bgColor: "bg-gray-900",
     borderColor: "border-orange-800",
-    items: ["SQL", "Hadoop", "Spark", "Hive", "MapReduce"]
+    items: ["SQL", "Hadoop"]
   }
 ];
 
