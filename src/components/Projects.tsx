@@ -4,28 +4,28 @@ import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
+    title: "ApneaView",
+    description: "An AI-powered platform that detects sleep apnea from ECG signals using deep learning and provides real-time analysis with intuitive visual insights.",
+    image: "https://images.unsplash.com/photo-1585577529540-a8095ea25427?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    github: "https://github.com/Samrat740/Sleep-Apnea-Detection-Using-ECG-Signals",
+    demo: "https://apneaview.vercel.app/",
+    tech: ["CNN", "WFDB", "React", "Typescript", "FastAPI"]
+  },
+  {
+    title: "SeedSense",
+    description: "Machine learning application for analyzing seed quality using computer vision.",
+    image: "https://images.unsplash.com/photo-1599320092708-8a9dde49fc2c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    github: "https://github.com/Samrat740/Crop-Seed-Quality-Analyzer-Backend",
+    demo: "https://seedsense.vercel.app/",
+    tech: ["React", "OpenCV","HSV", "Laplachian", "Feature Extraction"]
+  },
+  {
     title: "AI Travel Planner",
     description: "An intelligent travel planning application that uses AI to create personalized itineraries based on user preferences and constraints.",
     image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=500",
     github: "https://github.com/Samrat740/AI-Powered-Travel-Planner",
     demo: "https://ai-powered-travel-planner-kquowvjmt8wcnftrebcpet.streamlit.app/",
     tech: ["Python", "TensorFlow", "Flask", "React"]
-  },
-  {
-    title: "Seed AI App",
-    description: "Machine learning application for identifying plant diseases and providing treatment recommendations using computer vision.",
-    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&q=80&w=500",
-    github: "https://github.com/Samrat740/Seed-quality-analyzer",
-    demo: "https://seed-quality-analyzer-zyhrrvlethrwmfgfmev3fj.streamlit.app/",
-    tech: ["Python", "OpenCV","HSV", "Laplachian", "Feature Extraction"]
-  },
-  {
-    title: "Movie Recommender",
-    description: "Content-based movie recommendation system using natural language processing and collaborative filtering.",
-    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=500",
-    github: "https://github.com/Samrat740/movie-recommender",
-    demo: "/a.html",
-    tech: ["Python", "Scikit-learn", "NLTK", "Streamlit"]
   },
   {
     title: "Email Classifier",
