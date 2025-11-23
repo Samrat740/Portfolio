@@ -1,17 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Certifications from './components/Certifications';
-import Education from './components/Education';
-import Resume from './components/Resume';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+// src/App.tsx
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Certifications from "./components/Certifications";
+import Education from "./components/Education";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-
+/* -------------------------
+   Loader: Lottie Yeti animation
+   Uses the uploaded JSON at: /mnt/data/Loading Yeti.json
+   Make sure <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+   is added to index.html so <lottie-player> web component works.
+   File source citation: :contentReference[oaicite:1]{index=1}
+   ------------------------- */
 function Loader() {
   return (
     <motion.div
@@ -19,32 +27,20 @@ function Loader() {
       exit={{ opacity: 0 }}
       className="fixed inset-0 bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center z-50"
     >
-      <div className="relative">
-        <motion.div
-          animate={{
-            scale: [1, 2, 2, 1, 1],
-            rotate: [0, 0, 270, 270, 0],
-            borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-          }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            times: [0, 0.2, 0.5, 0.8, 1],
-            repeat: Infinity,
-            repeatDelay: 1
-          }}
-          className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600"
+      <div className="flex flex-col items-center justify-center">
+        <lottie-player
+          src="public\Loading Yeti.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+          style={{ width: 300, height: 300 }}
         />
+
         <motion.div
-          animate={{
-            opacity: [0, 1, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatDelay: 1
-          }}
-          className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-gray-600 font-medium"
+          animate={{ opacity: [0.2, 1, 0.2] }}
+          transition={{ duration: 1.6, repeat: Infinity }}
+          className="mt-4 text-gray-700 font-medium"
         >
           Loading...
         </motion.div>
@@ -53,7 +49,8 @@ function Loader() {
   );
 }
 
-function ScrollToTop() {
+
+function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -65,14 +62,14 @@ function ScrollToTop() {
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -88,22 +85,43 @@ function ScrollToTop() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </motion.button>
       )}
     </AnimatePresence>
+  );
+}
+
+/* HomePage: your full single-page layout */
+function HomePage() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Certifications />
+      <Education />
+      <Resume />
+      <Contact />
+      <Footer />
+    </>
+  );
+}
+
+/* ContactPage: dedicated contact route (useful for direct links) */
+function ContactPage() {
+  return (
+    <>
+      <Navbar />
+      <main className="pt-20">
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
 
@@ -116,20 +134,25 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white transition-colors duration-200">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Certifications />
-      <Education />
-      <Resume />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-      {loading && <Loader />}
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white transition-colors duration-200">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <HomePage />
+              </>
+            }
+          />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+
+        <ScrollToTopButton />
+        {loading && <Loader />}
+      </div>
+    </BrowserRouter>
   );
 }
 

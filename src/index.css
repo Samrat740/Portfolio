@@ -10,8 +10,51 @@ body {
   padding: 0;
 }
 
+/* smoothing & box-sizing for consistent rendering */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* ensure images behave consistently */
+img { display: block; max-width: 100%; }
+
+/* make anchors land below fixed header (if using anchor links) */
+section[id] { scroll-margin-top: 96px; }
+
 /* This prevents background scroll when mobile menu is open */
 .scroll-lock {
   overflow: hidden;
   height: 100%;
+}
+
+/* keep anchors below fixed header */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+/* subtle card look for mobile menu */
+.bg-white\/3 { background-color: rgba(255,255,255,0.03); }
+.bg-white\/4 { background-color: rgba(255,255,255,0.04); }
+.bg-white\/6 { background-color: rgba(255,255,255,0.06); }
+
+/* nice focus ring for keyboard users */
+button:focus, a:focus {
+  outline: 3px solid rgba(99,102,241,0.18);
+  outline-offset: 2px;
+}
+
+/* tweak for desktop nav active underline */
+nav .active-underline::after {
+  content: '';
+  display: block;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#3b82f6,#a78bfa);
+  width: 100%;
+  margin-top: 6px;
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform .28s ease;
 }
