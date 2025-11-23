@@ -14,8 +14,8 @@ import { FileText, Download, X } from 'lucide-react';
   If you later move files to public/, update paths to e.g. "/resume.pdf" and "/resume_image.jpg".
 */
 
-const RESUME_PDF = 'public/resume.pdf';
-const PREVIEW_IMAGE = 'public/resume_image.jpg';
+const RESUME_PDF = '/resume.pdf';
+const PREVIEW_IMAGE = '/resume_image.jpg';
 const LOTTIE_SRC = '<public />Loading Yeti.json';
 
 export default function Resume() {

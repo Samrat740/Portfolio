@@ -29,7 +29,7 @@ function Loader() {
     >
       <div className="flex flex-col items-center justify-center">
         <lottie-player
-          src="public\Loading Yeti.json"
+          src="/Loading Yeti.json"
           background="transparent"
           speed="1"
           loop
