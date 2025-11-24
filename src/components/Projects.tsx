@@ -118,8 +118,7 @@ export default function Projects() {
                   <motion.a
                     whileHover={{ scale: 1.1 }}
                     href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
+              
                     className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <ExternalLink className="w-5 h-5" />
