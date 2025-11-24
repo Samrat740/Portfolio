@@ -87,13 +87,13 @@ export default function Contact() {
             <ContactCard
               icon={<Phone className="w-6 h-6 text-green-600" />}
               title="Phone"
-              content="+91 96099 16176"
+              content="+91 9609916176"
               href="tel:+919609916176"
             />
             <ContactCard
               icon={<MapPin className="w-6 h-6 text-purple-600" />}
               title="Location"
-              content="Punjab, India"
+              content="Kolkata, West Bengal, India"
             />
           </motion.div>
 
